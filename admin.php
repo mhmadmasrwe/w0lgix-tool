@@ -11,7 +11,7 @@ $art =  "
 \033[1;34m#                 coded by w0lgix                 #
 \033[1;36m#                 v2.0                            #
 \033[1;32m#                                                 #
-\033[1;31m#      Using php admin.php http://victim.com/     #               
+\033[1;31m#      Using php admin.php www.example.com        #               
 \033[1;34m###################################################\n
 ";
 
@@ -72,7 +72,7 @@ admin/','adminLogin/','admin_area/','panel-administracion/','instadmin/',
 
 	foreach ($list as $path){
 		
-		$get = get_headers($site.$path);
+		$get = get_headers("http://".$site."/".$path);
 
 		if ($site == null) {
 	 if( stristr( php_uname( 's' ), 'Windows NT' ) ) { 
@@ -90,7 +90,7 @@ admin/','adminLogin/','admin_area/','panel-administracion/','instadmin/',
 	
 		if(preg_match("/200/",$get[0]))
 		
-			echo "\033[1;31m[+]\033[1;m"."\033[1;34mFound=>>\033[1;m"." \033[1;32m$site$path\033[1;m\n";
+			echo "\033[1;31m[+]\033[1;m"."\033[1;34mFound=>>\033[1;m"." \033[1;32mhttp://$site/$path\033[1;m\n";
 		
 		}
 		
