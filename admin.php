@@ -17,6 +17,10 @@ $art =  "
 
 
 $site = $argv[1];
+
+$arr = array('http://','https://','/');
+$site1 = str_replace($arr, '', $site);
+
 echo $art;
 
 
@@ -67,14 +71,14 @@ admin/','adminLogin/','admin_area/','panel-administracion/','instadmin/',
                 ,"/upload2.zip","/wordpress-3.8-tr_TR.zip","/wordpress-3.9.1-he_IL.zip","/wordpress-3.8.zip"
                 ,"/zoldick.php","/wp.zip","/includes/config.php~","/wordpress.zip","/admin","/login.php","/Log-in.html","/404.php"
                 ,"/r57.php","/shell.php","/sql","/pro.php","/upload.php","/priv8.php","/c99.php","/404.php","/wso.php","/admin.php","/DZ.php","/scama","/paypal"
-                ,"/5.php","/hacker","/dz.php","/login.php","/members.php","/backdoor.php","/angel.php","/123.php","/Log-in.html",'/login.php','purchasing_login.php','okbye.php','/phpMyAdmin','/adminG7sus4','/_admin');
+                ,"/5.php","/hacker","/dz.php","/login.php","/members.php","/backdoor.php","/angel.php","/123.php","/admin.aspx",'/login.php','purchasing_login.php','okbye.php','/phpMyAdmin','/adminG7sus4','/_admin','/admin1/index.php');
 
-
-	foreach ($list as $path){
+$list1 = str_replace('/', '', $list);
+	foreach ($list1 as $path){
 		
-		$get = get_headers("http://".$site."/".$path);
+		$get = get_headers("http://".$site1."/".$path);
 
-		if ($site == null) {
+		if ($site1 == null) {
 	 if( stristr( php_uname( 's' ), 'Windows NT' ) ) { 
         // Windows 
         $cmd = system( 'cls' ); 
@@ -90,7 +94,7 @@ admin/','adminLogin/','admin_area/','panel-administracion/','instadmin/',
 	
 		if(preg_match("/200/",$get[0]))
 		
-			echo "\033[1;31m[+]\033[1;m"."\033[1;34mFound=>>\033[1;m"." \033[1;32mhttp://$site/$path\033[1;m\n";
+			echo "\033[1;31m[+]\033[1;m"."\033[1;34mFound=>>\033[1;m"." \033[1;32mhttp://$site1/$path\033[1;m\n";
 		
 		}
 		
