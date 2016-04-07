@@ -23,16 +23,14 @@ case $num in
 
 echo -e "enter website"
 read website
-url=`cat /usr/share/fierce/hosts.txt`
-echo "Prossing..."	
-for url in $url
-do
+
+echo -e "Time Strating: "$(date +"%r ")
+
+
+	fierce -dns $website 
 	
-	sleep 1
-	host $url.$website | grep "has address" | cut -d" " -f1,4
-	
-done
-echo "Finish !!"
+
+echo -e "Time Finish: "$(date +"%r ")
 ;;
 
 	2)
