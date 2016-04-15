@@ -15,7 +15,7 @@ echo "#            Using ./mass.sh                      #"
 echo "###################################################"
 
 if [  -z "$1" ] && [ -z  "$2" ];then
-echo '[+] ./mass.sh index-path folder-path'
+echo '[+] ./mass.sh [index-path] [folder-path]'
 echo
 exit
 
