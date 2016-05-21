@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 $art =  "
 \033[1;31m###################################################
 \033[1;32m#https://www.facebook.com/Officiel.mhmad          #
@@ -24,7 +24,7 @@ $site1 = str_replace($arr, '', $site);
 echo $art;
 
 
-   $list = array ('a2c_cms/index.php','/admin/cms.php','/spip.php','/admin/admin.php','/web.config.txt','/cms','/phpmyadmin/index.php','robots.txt','/phpinfo.php','/404.php','admin/','administrator/','admin1/','admin2/','admin3/','admin4/','admin5/','usuarios/','usuario/','administrator/','moderator/','webadmin/','adminarea/','/
+   $list = array ('/swadmin/index.php','a2c_cms/index.php','/admin/cms.php','/spip.php','/admin/admin.php','/web.config.txt','/cms','/phpmyadmin/index.php','robots.txt','/phpinfo.php','/404.php','admin/','administrator/','admin1/','admin2/','admin3/','admin4/','admin5/','usuarios/','usuario/','administrator/','moderator/','webadmin/','adminarea/','/
 admin/','adminLogin/','admin_area/','panel-administracion/','instadmin/',
 'memberadmin/','administratorlogin/','adm/','admin/account.php','admin/index.php','admin/login.php','admin/admin.php','admin/account.php',
 'admin_area/admin.php','admin_area/login.php','siteadmin/login.php','siteadmin/index.php','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
