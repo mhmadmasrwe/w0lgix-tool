@@ -80,6 +80,10 @@ echo "OR\n";
 echo "\033[1;33mUsing\033[1;m "."\033[1;31mphp"." \033[1;36mweblack.php"." \033[1;32m-w\033[1;m"." \033[1;37m(wordlist path)\033[1;m ".
     "\033[1;32m(hash)\033[1;m "."\033[1;36m(type-hash)\033[1;m\n";
 echo "OR\n\033[1;33musing " ."\033[1;31mphp "."\033[1;36mweblack.php "."\033[1;32m--online "."\033[1;34m"."\033[1;37m(hash) "."\033[1;34m(md5-sha1)\n";
+echo "OR\n\033[1;33mUsing\033[1;m "."\033[1;31mphp"." \033[1;36mweblack.php"." \033[1;32m--list-hash\033[1;m"." \033[1;37m(wordlist path)\033[1;m ".
+    "\033[1;32mhash-list\033[1;m "."\033[1;36m(type-hash)\033[1;m\nOR\n";
+echo "\033[1;33mUsing\033[1;m "."\033[1;31mphp"." \033[1;36mweblack.php"." \033[1;32m(base64)\033[1;m"." \033[1;34m(word)\033[1;m\nOR\n";
+echo "\033[1;33mUsing\033[1;m "."\033[1;31mphp"." \033[1;36mweblack.php"." \033[1;32m(debase64)\033[1;m"." \033[1;34m(word)\033[1;m\n";
 }
 
 else if ($encoder == null){
@@ -196,9 +200,9 @@ echo $finel."\n";
 if ($encoder == "--wordlist" or $encoder == "-w"){
 
 
-$file5 = $argv[2];
-$hash5 = $argv[3];
-$mode5 = $argv[4];
+$file5 = $argv[2]; //password-file
+$hash5 = $argv[3]; // hash
+$mode5 = $argv[4]; //mode md5-sha512
 if ($file5 == null or $hash5 == null or $mode5 == null){
 system("reset");
     echo $art."\033[1;33mUsing\033[1;m "."\033[1;31mphp"." \033[1;36mweblack.php"." \033[1;32m-w\033[1;m"." \033[1;37m(wordlist path)\033[1;m ".
@@ -216,7 +220,11 @@ foreach ($aa5 as $key5) {
 $b5 = hash($mode5,$key5);
 
 if ($b5 == $hash5){
-
+	
+/*	system("clear");
+	echo $art;
+	echo "hash ".$mode5."\n";
+*/
     echo "the password is : ".$key5."\n";
     die();
 }
@@ -310,6 +318,8 @@ if ($h == $key2){
 			 }
 }
 
+
+
 if ($encoder == "-h" or $encoder == "--help" or $encoder == "help"){
 
 echo "\nyou can Decrypt hashes and Encypt Hashes\n\n";
@@ -318,7 +328,7 @@ echo "--online : you can Decrypt md5 && sha1 online\n\n";
 
 echo "--list-hash : you can Decrypt 38 hash in list file \n\n";
 
-echo "debase64 |unbase64 : you can Decrypt hashes base64\n\n";
+echo "base64 | debase64 : you can Decrypt hashes base64\n\n";
 
 echo "--wordlist | -w : to add path wordlist password\n\n";
 
