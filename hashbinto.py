@@ -32,7 +32,7 @@ logo= """
                                     \033[1;47mCoded By w0lgix v1.0\033[1;m 
 """
 print logo
-print "\033[1;32mselect 1-6\n\033[1;m"
+print "\033[1;32mselect 1-7\n\033[1;m"
 
 print "\033[1;31m[1] md5  Decrypt\033[1;m"
 print "\033[1;33m[2] md5 Decrypt Online\033[1;m"
