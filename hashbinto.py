@@ -1,7 +1,9 @@
 #!/usr/bin/python 
 # encoding: utf-8
-#http://md5decrypt.net/en/
-#http://md5cracker.org/
+
+######################################
+#    Coded By w0lgix g(Anonsniper)   #
+######################################
 import sys
 import os
 import platform
