@@ -140,7 +140,7 @@ elif type1 == '5':
 
 elif type1 == '7':
 	hash =  raw_input("Hash: ") #~exemple : $P$FDj9XhuS43ooqUPB4EVddWAT5lCWyA1
-	passl = "/home/parrot/Desktop/w0lgix/password/pwd.txt" #~change it by wordlist name
+	passl = raw_input('wordlist path: ') #~change it by wordlist name
 	threads = 1
 	try:
     	 plist = open(passl).readlines()
