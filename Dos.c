@@ -1,5 +1,5 @@
 /* XerXes - Most powerful dos tool - THN (http://www.thehackernews.com) */
-/* gcc dos.c -o Dos ; chmod 755 Dos */ 
+/* gcc Dos.c -o Dos ; chmod 755 Dos */ 
 
 #include <stdio.h>
 #include <stdlib.h>
