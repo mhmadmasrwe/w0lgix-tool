@@ -216,21 +216,25 @@ fclose($open5);
 
 $aa5 = explode("\n", $read5);
 foreach ($aa5 as $key5) {
-    
+  
 $b5 = hash($mode5,$key5);
 
-if ($b5 == $hash5){
+if ($b5 != $hash5){
 	
-/*	system("clear");
-	echo $art;
-	echo "hash ".$mode5."\n";
-*/
-    echo "the password is : ".$key5."\n";
+echo "Crack: ". $b5." != ".$hash5."\n";
+}
+
+else
+{
+    echo "\n/**the password is **/: ".$key5."\n";
     die();
 }
 
 
 }
+
+
+
 
 
 }
