@@ -1,3 +1,4 @@
+#!/usr/bin/php5
 <?php
 error_reporting(0);
 
@@ -388,6 +389,48 @@ echo $art."\033[1;33mUsing\033[1;m "."\033[1;31mphp"." \033[1;36mweblack.php"." 
 
 
 }
+
+
+elseif($dtype == "apache_sha1")
+{
+$open3 = fopen($flist,"r");
+$read3 = fread($open3,filesize($flist));
+fclose($open3);
+
+
+$a3 = explode("\n", $read3);
+foreach($a3 as $key3)
+{
+    
+    $open1 = fopen($flist1, "r");
+    $read1 = fread($open1, filesize($flist1));
+    fclose($open1);
+    $aa3 = explode("\n", $read1);
+    foreach ($aa3 as $key2) {
+        
+            
+    
+        $h = base64_encode(sha1($key3, TRUE));
+        $key21 = preg_replace('/{SHA}/', '', $key2);
+        if ($key21 == $h)
+        {
+            echo "{SHA}".$key21 . "\t==\t" . $key3."\n";
+            $final = fopen("rezult.txt", "a");
+            $filnal1 = fwrite($final, "{SHA}".$key21 . "\t==\t" . $key3."\n");
+            fclose($final);
+
+            
+        }
+        else
+        {
+            echo "{SHA}".$key21 . "\t!=\t" . $key3 ."\n";
+        }
+
+    }
+}
+}
+
+
 else{
 $open3 = fopen($flist, "r");
 $read3 = fread($open3, filesize($flist));
@@ -424,8 +467,6 @@ if ($h == $key2){
 
 			 }
 }
-
-
 
 if ($encoder == "-h" or $encoder == "--help" or $encoder == "help"){
 
@@ -498,7 +539,7 @@ elseif (strlen($hash) == 128) {
     echo strlen($hash)."\n";
 }
 
-elseif (strlen($hash) == 80) {
+elseif (strlen($hash) == 80 && preg_match_all("/[A-Z]/",$aa)) {
     
     echo "Possible:\n\n[+] RIPEMD320\n";
     echo strlen($hash)."\n";
@@ -518,7 +559,7 @@ elseif (strlen($hash) == 40) {
 
 elseif (strlen($hash) == 96) {
     
-    echo "Possible:\n\n[+] SHA384:";
+    echo "Possible:\n\n[+] SHA384\n";
     echo strlen($hash)."\n";
 }
 //snefru gost gost-crypto aval256,5 haval256,4 joomla
@@ -534,7 +575,7 @@ elseif (strlen($hash) == 34 and preg_match("/\$/", $hash)) {
     echo strlen($hash)."\n";
 }
 
-elseif (strlen($hash) == 8) {
+elseif (strlen($hash) == 8 && preg_match_all("/[A-Z]/",$aa)) {
     
     echo "Possible:\n\n[+] CRC32\n[+] CRC32B\n[+] JOAAT\n[+] ADLER32\n";
     echo strlen($hash)."\n";
