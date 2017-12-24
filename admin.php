@@ -32,7 +32,7 @@ $site1 = str_replace($arr, '', $site);
 
 
 
-   $list = array ('/Apanel/index.php','/apanel/index.php','/Administration/index.php','/swadmin/index.php','a2c_cms/index.php','/admin/cms.php','/spip.php','/admin/admin.php','/web.config.txt','/cms','/phpmyadmin/index.php','robots.txt','/phpinfo.php','/404.php','admin/','administrator/','admin1/','admin2/','admin3/','admin4/','admin5/','usuarios/','usuario/','administrator/','moderator/','webadmin/','adminarea/','/
+   $list = array ('/administration/index.php','/.get/','/db.sql','/appraisal/index.php','/oldadmin_login.php','/cp/Login.aspx','/Apanel/index.php','/apanel/index.php','/Administration/index.php','/swadmin/index.php','a2c_cms/index.php','/admin/cms.php','/spip.php','/admin/admin.php','/web.config.txt','/cms','/phpmyadmin/index.php','robots.txt','/phpinfo.php','/404.php','admin/','administrator/','admin1/','admin2/','admin3/','admin4/','admin5/','usuarios/','usuario/','administrator/','moderator/','webadmin/','adminarea/','/
 admin/','adminLogin/','admin_area/','panel-administracion/','instadmin/',
 'memberadmin/','administratorlogin/','adm/','admin/account.php','admin/index.php','admin/login.php','admin/admin.php','admin/account.php',
 'admin_area/admin.php','admin_area/login.php','siteadmin/login.php','siteadmin/index.php','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
@@ -61,7 +61,7 @@ admin/','adminLogin/','admin_area/','panel-administracion/','instadmin/',
 'templates/rhuk_milkyway/index.php','templates/beez/index.php','sado.php','admin1.php','upload.php','up.php','vb.zip','vb.rar',
 'admin2.asp','uploads.php','sa.php','sysadmins/','admin1/','sniper.php','administration/Sym.php','images/Sym.php',
 '/r57.php','/wp-content/plugins/disqus-comment-system/disqus.php','gzaa_spysl','sql-new.php','/shell.php','/sa.php','/admin.php',
-'/sa2.php','/2.php','/gaza.php','/up.php','/upload.php','/uploads.php','/templates/beez/index.php','shell.php','/amad.php',
+'/sa2.php','/2.php','/gaza.php','/mhcms-admin','/upload.php','/uploads.php','/templates/beez/index.php','shell.php','/amad.php',
 '/t00.php','/dz.php','/site.rar','/Black.php','/site.tar.gz','/home.zip','/home.rar','/home.tar','/home.tar.gz',
 '/forum.zip','/forum.rar','/forum.tar','/forum.tar.gz','/test.txt','/ftp.txt','/user.txt','/site.txt','/error_log','/error',
 '/cpanel','/awstats','/site.sql','/vb.sql','/forum.sql','r00t-s3c.php','c.php','/backup.sql','/back.sql','/data.sql','wp.rar/',
@@ -121,7 +121,7 @@ $site1 = str_replace($arr, '', $sites);
 echo $art;
 
 
-   $list = array ('/Apanel/index.php','/apanel/index.php','/Administration/index.php','/swadmin/index.php','a2c_cms/index.php','/admin/cms.php','/spip.php','/admin/admin.php','/web.config.txt','/cms','/phpmyadmin/index.php','robots.txt','/phpinfo.php','/404.php','admin/','administrator/','admin1/','admin2/','admin3/','admin4/','admin5/','usuarios/','usuario/','administrator/','moderator/','webadmin/','adminarea/','/
+   $list = array ('/.get/','/db.sql','/Apanel/index.php','/apanel/index.php','/Administration/index.php','/swadmin/index.php','a2c_cms/index.php','/admin/cms.php','/spip.php','/admin/admin.php','/web.config.txt','/cms','/phpmyadmin/index.php','robots.txt','/phpinfo.php','/404.php','admin/','administrator/','admin1/','admin2/','admin3/','admin4/','admin5/','usuarios/','usuario/','administrator/','moderator/','webadmin/','adminarea/','/
 admin/','adminLogin/','admin_area/','panel-administracion/','instadmin/',
 'memberadmin/','administratorlogin/','adm/','admin/account.php','admin/index.php','admin/login.php','admin/admin.php','admin/account.php',
 'admin_area/admin.php','admin_area/login.php','siteadmin/login.php','siteadmin/index.php','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
